@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="CustomChat"
+	targetNamespace="http://localhost:8080/CustomChatService/CustomChat.wsdl"
+	xmlns:tns="http://localhost:8080/CustomChatService/CustomChat.wsdl"
+	xmlns:xsd="http://www.w3.org/2000/10/XMLSchema/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+	<!-- START: TEST METHOD MESSAGES-->
+
+	<message name="testInput">
+		<part name="messageInput" element="xsd:string"/>
+	</message>
+
+	<message name="testOutput">
+		<part name="mesageResponse" element="xsd:string"/>
+	</message>
+
+	<!-- END: TEST METHOD MESSAGES-->
+
+	<!-- START: LOGIN METHOD MESSAGES -->
+	<message name="loginInput">
+		<part name="loginUsername" element="xsd:string"/>
+		<part name="loginPassword" element="xsd:string"/>
+	</message>
+
+	<message name="loginOutput">
+		<part name="loginResponse" element="xsd:string"/>
+	</message>
+	<!-- END: LOGIN METHOD MESSAGES -->
+
+	<!-- START: REGISTER METHOD MESSAGES -->
+	<message name="registerRequest">
+		<part name="registerUsername" element="xsd:string"/>
+		<part name="registerEmail" element="xsd:string"/>
+		<part name="registerPassword" element="xsd:registerPassword"/>
+	</message>
+
+	<message name="registerResponse">
+		<part name="response" element="xsd:string"/>
+	</message>
+	<!-- END: REGISTER METHOD MESSAGES -->
+
+	<portType name="CustomChatPortType">
+		<operation name="testMessage">
+			<input message="tns:testInput"/>
+			<output message="tns:testOutput"/>
+		</operation>
+
+		<operation name="executeLogin">
+			<input message="tns:loginInput"/>
+			<output message="tns:loginOutput"/>
+		</operation>	
+
+		<operation name="executeRegister">
+			<input message="tns:registerRequest"/>
+			<output message="tns:registerResponse"/>
+		</operation>	
+	</portType>
+
+	<binding name="CustomChatBinding" type="tns:CustomChatPortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="testMessage">
+			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			<input>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			</input>
+			<output>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			</output>
+		</operation>
+
+		<operation name="executeLogin">
+			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php" 
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			<input>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>				
+			</input>
+
+			<output>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			</output>
+			
+		</operation>
+
+		<operation name="executeRegister">
+			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php"
+				encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+
+			<input>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			</input>
+
+			<output>
+				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			</output>
+
+		</operation>
+
+	</binding>
+
+	<service name="CustomChatService">
+		<port name="CustomChatServicePort" binding="tns:CustomChatBinding">
+			<soap:address location="http://localhost:8080/CustomChatService/Service.php"/>
+		</port>
+	</service>
+
+</definitions>
