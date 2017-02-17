@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions name="CustomChat"
-	targetNamespace="http://localhost:8080/CustomChatService/CustomChat.wsdl"
-	xmlns:tns="http://localhost:8080/CustomChatService/CustomChat.wsdl"
+	targetNamespace="http://localhost:8080/CustomChat/CustomChatService/CustomChat.wsdl"
+	xmlns:tns="http://localhost:8080/CustomChat/CustomChatService/CustomChat.wsdl"
 	xmlns:xsd="http://www.w3.org/2000/10/XMLSchema/"
 	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
@@ -62,7 +62,7 @@
 	<binding name="CustomChatBinding" type="tns:CustomChatPortType">
 		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<operation name="testMessage">
-			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
+			<soap:operation soapAction="http://localhost:8080/CustomChat/CustomChatService/classes/initializer/Initializer.php" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
 			<input>
 				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
 			</input>
@@ -72,7 +72,7 @@
 		</operation>
 
 		<operation name="executeLogin">
-			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php" 
+			<soap:operation soapAction="http://localhost:8080/CustomChat/CustomChatService/classes/initializer/Initializer.php" 
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
 			<input>
 				<soap:body use="literal" encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>				
@@ -85,7 +85,7 @@
 		</operation>
 
 		<operation name="executeRegister">
-			<soap:operation soapAction="http://localhost:8080/CustomChatService/classes/initializer/Initializer.php"
+			<soap:operation soapAction="http://localhost:8080/CustomChat/CustomChatService/classes/initializer/Initializer.php"
 				encodingStyle="http://schemas.xmlsoap.org/soap/encoding"/>
 
 			<input>
@@ -102,7 +102,7 @@
 
 	<service name="CustomChatService">
 		<port name="CustomChatServicePort" binding="tns:CustomChatBinding">
-			<soap:address location="http://localhost:8080/CustomChatService/Service.php"/>
+			<soap:address location="http://localhost:8080/CustomChat/CustomChatService/Service.php"/>
 		</port>
 	</service>
 

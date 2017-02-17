@@ -17,7 +17,7 @@
 
 			ini_set("soap.wsdl_cache_enabled","0"); 
 
-			$this->url = "http://localhost:8080/CustomChatService/CustomChat.wsdl";
+			$this->url = "http://localhost:8080/CustomChat/CustomChatService/CustomChat.wsdl";
 			$this->server = new SoapServer($this->url);
 
 			$this->server->setClass('Initializer');

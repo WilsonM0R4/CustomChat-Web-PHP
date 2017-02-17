@@ -26,7 +26,7 @@
 			if($result['0']==$pwd){
 				$returnValue = 'success';		
 			}else{
-				$returnValue = $result;
+				$returnValue = 'failure';
 			}
 
 			return $returnValue;

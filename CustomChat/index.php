@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title> CustomChat! </title>
-	<link rel="stylesheet" href="style/index.css"/>
+	<link rel="stylesheet" href="modules/style/index.css"/>
 </head>
 
 <body>
@@ -14,14 +14,14 @@
 
 	<div id="login_box" >
 		
-		<h2>Welcome to CustonmChat!</h2>
+		<h2>Welcome to CustomChat!</h2>
 
 		<form name="login_form" id="login_form" action="modules/login/LoginHandler.php" method="POST">
 
 			<div class="login_text_cont">
-				<input type="text" class="login_text_box" name="email_field" placeholder="email"/>
+				<input type="text" class="login_text_box" name="email_field" placeholder="email" required=""/>
 				<br>
-				<input type="password" class="login_text_box" name="password_field" placeholder="password">
+				<input type="password" class="login_text_box" name="password_field" placeholder="password" required="">
 				<br>
 			</div>
 				

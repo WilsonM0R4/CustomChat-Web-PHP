@@ -15,12 +15,15 @@
 		function signIn($user, $password){
 
 			$linker = new Linker();
-			$response = $linker->makeRequest('executeLogin',array('loginUsername'=>$user, 'loginPassword'=>$password), 0);
+			$response = $linker->makeRequest('executeLogin',array('loginUsername'=>$user, 'loginPassword'=>$password), 0);			
 
 			if($response == 'success'){
 				header('location: '.$this->successURL);
 			}else{
-				echo $response;
+				//echo "<script> alert('cannot login: ".$response." '); </script>";
+				//echo "<script> window.confirm('cannot login: ".$response." '); <script>";
+				header('location: http://localhost:8080/CustomChat/CustomChat/modules/view/failed_login.php');
+				//die();
 			}
 
 			//echo "<script> alert('response is: ".$response." '); </script>" ; 
