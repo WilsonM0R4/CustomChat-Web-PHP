@@ -21,15 +21,19 @@
 			<input type="password" class="reg_text_box" name="password_field" placeholder="type your password" required=""/>
 			<br>
 			<input type="password" class="reg_text_box" name="verify_pass_field" placeholder="type your password again" required=""/>
-		</div>
-			<br>
+		</div>			
 
 		<div id="reg_button_container">
 			<input type="submit" class="button_class" id="reg_button" name="reg_button" value="Sign in!"/>
-			<input type="submit" class="button_class" id="back_button" name="back_button" value="back to login"/>
+		</div>
 		</form>
+
+		<div id="reg_button_container_2">
+			<input type="submit" class="button_class" id="back_button" name="back_button" value="back to login" onclick="window.location.replace('http://localhost:8080/CustomChat/CustomChat/index.php');"/>
+		</div>
 
 	</div>
 
 	</body>
+
 </html>

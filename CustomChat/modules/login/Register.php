@@ -35,10 +35,10 @@
 	}
 
 
-	if(isset($_POST['back_button'])){
+	/*if(isset($_POST['back_button'])){
 		header('location: ');
 		die();
-	}else if(isset($_POST['reg_button'])){
+	}else*/ if(isset($_POST['reg_button'])){
 		$user = $_POST['username_field'];
 		$email = $_POST['email_field'];
 		$pwd = $_POST['password_field'];

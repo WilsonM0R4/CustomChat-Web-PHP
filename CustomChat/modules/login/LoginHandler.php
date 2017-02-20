@@ -6,7 +6,7 @@
 
 	class LoginHandler {
 
-		private $successURL = '../view/home/Home.php';
+		private $successURL = '../view/Home.php';
 
 		function __construct(){
 
