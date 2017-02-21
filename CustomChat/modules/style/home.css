@@ -35,13 +35,12 @@ body {
 
 #plus_div {
 
-	width:10%;
+	width:15%;
 	height:50%;
 	background-color:#009999;
 	float:right;
 	margin: auto;
-	text-align: center;
-	font-size:160%;
+	text-align: center;	
 
 }
 
@@ -54,29 +53,141 @@ body {
 	/*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);*/	
 }
 
+/** menu list style **/
+
+.menu_list {
+
+	width:100%;
+	height:100%;
+	margin: 0 auto;
+}
+
+li {
+
+	list-style-type: none;
+	height: 40px;
+	display: block;
+
+}
+
+.menu_list li:hover {
+	background-color: #009999;	
+	color: white;
+}
+
+/** keeps hidden list elements **/
+
+li ul {
+	display: none;
+}
+
+/** shows list elements when hover **/
+
+li:hover > ul {
+	display:block;
+}
+
+.menu_list_class {
+
+	width: 100%;
+	height:100%;
+	margin:0 auto;
+
+}
+
+.list_title {
+	font-size: 160%;
+}
+
+.list_item {
+	
+	padding-left: 18%;
+	background-color: #f2f2f2;
+	font-family:  arial;
+	font-size: 65%;
+	padding-top:10%;
+
+}
+
+#list_elements {
+
+	box-shadow: 2px 4px 3px 0px rgba(0,0,0,0.2);
+	color:#8c8c8c;
+	text-align: left;
+
+}
+
+/** FLOATING ONLINE CONTAINER STYLE **/
+
 #floating_online_container {
 
-	width:120px;
-	height:50px;	
-	float:right;	
+	width:100px;
+	height:40px;	
+	float:right;
+	background-color: #009999;
+	color:white;
 	margin-top: -80px;
 	margin-right: 40px;	
 	border-radius: 6px;
 	box-shadow: 2px 4px 3px 0px rgba(0,0,0,0.2);
-	
+	font-family: arial;
+	position: relative;
+	text-align: center;
+	padding-top:1%;
+		
 }
 
-#online_submit {
+/*#online_title {
 
+	width:100%;	
+	height:75%;
+	padding-top:15%;
+	text-align: center; 
+
+}*/
+
+.online_nav {
 	width:100%;
 	height:100%;
-	border:0 none;
-	border-radius: 6px;
-	color:white;	
-	background-color:#009999;
-	font-size: 90%;
+	margin-top: -40px;
+	/*height:60vh;*/
+	/*margin-top:-170%;*/
+	/*margin-left:-190%;*/
+}
+
+.online_list{
+
+	width:200%;
+	/*margin-top:-300%;
+	margin-left:-190%;*/
+	background-color: #f2f2f2;
+	color:#8c8c8c;
+	z-index:-5;
+	position: relative;
+	bottom:100%;
+	box-shadow: 2px 4px 3px 0px rgba(0,0,0,0.2);
+	color:#8c8c8c;
+	text-align: left;	
 
 }
+
+.online_nav li ul{
+
+	padding-top:10%;
+	display:none;
+}
+
+.online_nav li:hover{
+	background-color:gray;
+	color:white;	
+
+}
+
+/*.online_nav li:hover {
+
+	background-color: black;
+
+}*/
 
 /*#shadow_test {
 
