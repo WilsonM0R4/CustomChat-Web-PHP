@@ -40,25 +40,6 @@
 
 	</div>
 
-	<div id="floating_online_container">
-		<!--div id="online_title"></div-->
-		Online
-		<nav class="online_nav">
-		
-			<ul class="online_list">
-				<li>Contact 1</li>
-				<li>Contact 2</li>
-				<li>Contact 3</li>
-				<li>Contact 4</li>
-				<li>Contact 4</li>
-			</ul>
-		</nav>
-	</div>
-
-	<!--div id="shadow_test">
-
-	</div-->
-
 </body>
 
 
